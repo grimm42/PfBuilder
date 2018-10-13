@@ -1,11 +1,14 @@
 ﻿using Microsoft.Practices.Unity;
+using PfBuilder.CharacterCreator;
 using PfBuilder.View;
+using Prism.Modularity;
+using Prism.Mvvm;
 using Prism.Unity;
 using System.Windows;
 
 namespace PfBuilder
 {
-    class Bootstrapper : UnityBootstrapper
+    public class Bootstrapper : UnityBootstrapper
     {
         protected override DependencyObject CreateShell()
         {
@@ -15,6 +18,18 @@ namespace PfBuilder
         protected override void InitializeShell()
         {
             Application.Current.MainWindow.Show();
+        }
+
+        protected override void ConfigureModuleCatalog()
+        {
+            var catalog = (ModuleCatalog)ModuleCatalog;
+            catalog.AddModule(typeof(CharacterCreatorModule));
+        }
+
+        protected override void ConfigureContainer()
+        {
+            base.ConfigureContainer();
+            ViewModelLocationProvider.SetDefaultViewModelFactory((type) => Container.Resolve(type));
         }
     }
 }

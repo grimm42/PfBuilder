@@ -119,5 +119,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PfBuilder.CharacterCreator\PfBuilder.CharacterCreator.csproj">
+      <Project>{6D1F5ED7-E6B8-415B-B61E-72D0855828C0}</Project>
+      <Name>PfBuilder.CharacterCreator</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
