@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PfBuilder.CharacterCreator"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PfBuilder.Models", "PfBuilder.Models\PfBuilder.Models.csproj", "{0F51BF4D-7F98-4BFC-BE15-8BDEAEDBCFA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PfBuilder.Repository", "PfBuilder.Repository\PfBuilder.Repository.csproj", "{32F26BB0-E02D-42CA-B58D-4C42B7F4E624}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0F51BF4D-7F98-4BFC-BE15-8BDEAEDBCFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F51BF4D-7F98-4BFC-BE15-8BDEAEDBCFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F51BF4D-7F98-4BFC-BE15-8BDEAEDBCFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F26BB0-E02D-42CA-B58D-4C42B7F4E624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F26BB0-E02D-42CA-B58D-4C42B7F4E624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F26BB0-E02D-42CA-B58D-4C42B7F4E624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F26BB0-E02D-42CA-B58D-4C42B7F4E624}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
