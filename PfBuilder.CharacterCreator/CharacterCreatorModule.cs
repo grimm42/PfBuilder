@@ -18,7 +18,6 @@ namespace PfBuilder.CharacterCreator
 
         public void Initialize()
         {
-                
         }
     }
 }
