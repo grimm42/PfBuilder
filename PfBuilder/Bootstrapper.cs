@@ -1,5 +1,6 @@
 ﻿using Microsoft.Practices.Unity;
 using PfBuilder.CharacterCreator;
+using PfBuilder.Infrastructure.Services;
 using PfBuilder.View;
 using Prism.Modularity;
 using Prism.Mvvm;
@@ -30,6 +31,8 @@ namespace PfBuilder
         {
             base.ConfigureContainer();
             ViewModelLocationProvider.SetDefaultViewModelFactory((type) => Container.Resolve(type));
+
+            Container.RegisterType<IDialogService, DialogService>(new ContainerControlledLifetimeManager());
         }
     }
 }

@@ -124,6 +124,10 @@
       <Project>{6D1F5ED7-E6B8-415B-B61E-72D0855828C0}</Project>
       <Name>PfBuilder.CharacterCreator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PfBuilder.Infrastructure\PfBuilder.Infrastructure.csproj">
+      <Project>{A008B0D3-B488-4E3A-B34F-DDC7D5D9A9CA}</Project>
+      <Name>PfBuilder.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
