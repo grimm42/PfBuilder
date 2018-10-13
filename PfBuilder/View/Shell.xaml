@@ -3,10 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PfBuilder.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Shell" Height="450" Width="800">
     <Grid>
-        <TextBlock FontSize="16" Text="Shell Window"/>
+        <materialDesign:Card Padding="32" Margin="16"
+                             Background="{DynamicResource PrimaryHueMidBrush}">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"                       
+                       Text="Shell Window"/>
+        </materialDesign:Card>
     </Grid>
 </Window>

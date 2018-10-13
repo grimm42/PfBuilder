@@ -3,6 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PfBuilder">
     <Application.Resources>
-         
+         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#ff844c"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#ff844c"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#f4511e"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#f4511e"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#b91400"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#b91400"/>
+            <!-- accent -->
+            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#1ec2f4"/>
+            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="#1ec2f4"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
