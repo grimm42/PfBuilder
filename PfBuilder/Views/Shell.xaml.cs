@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace PfBuilder.View
+namespace PfBuilder.Views
 {
     /// <summary>
     /// Interaction logic for Shell.xaml

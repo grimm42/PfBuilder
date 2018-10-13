@@ -1,7 +1,7 @@
 ﻿using Microsoft.Practices.Unity;
 using PfBuilder.CharacterCreator;
 using PfBuilder.Infrastructure.Services;
-using PfBuilder.View;
+using PfBuilder.Views;
 using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Unity;
