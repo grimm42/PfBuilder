@@ -1,10 +1,14 @@
-﻿namespace PfBuilder.Repository
+﻿using System.Collections.ObjectModel;
+
+namespace PfBuilder.Repository
 {
     public interface IRepository<T>
     {
-        T GetById(long id);
+        T LoadEntity(long id);
 
-        void Create(T entity);
+        ObservableCollection<T> LoadEntityCollection();
+
+        void Insert(T entity);
 
         void Delete(T entity);
 

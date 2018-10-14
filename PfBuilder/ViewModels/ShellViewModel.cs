@@ -21,7 +21,7 @@ namespace PfBuilder.ViewModels
         private void CreateCharacter()
         {
             var charRepository = new CharacterRepository();
-            var testChar = charRepository.GetById(1);
+            var testChar = charRepository.LoadEntity(1);
             Title = testChar.Name;
         }
     }

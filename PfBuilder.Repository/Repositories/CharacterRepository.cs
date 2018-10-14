@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using PfBuilder.Models.Entities;
-using System.Configuration;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SQLite;
 
@@ -8,7 +8,7 @@ namespace PfBuilder.Repository.Repositories
 {
     public class CharacterRepository : IRepository<Character>
     {
-        public void Create(Character entity)
+        public void Insert(Character entity)
         {
         }
 
@@ -16,9 +16,9 @@ namespace PfBuilder.Repository.Repositories
         {
         }
 
-        public Character GetById(long id)
+        public Character LoadEntity(long id)
         {
-            using (IDbConnection dbConnection = new SQLiteConnection(LoadConnectionString()))
+            using (IDbConnection dbConnection = new SQLiteConnection(RepositoryUtil.LoadConnectionString()))
             {
                 Character output = dbConnection.QuerySingle<Character>("Select * From Characters Where Id = @Id", new { Id = id});
                 return output;
@@ -29,9 +29,13 @@ namespace PfBuilder.Repository.Repositories
         {
         }
 
-        private static string LoadConnectionString()
+        public ObservableCollection<Character> LoadEntityCollection()
         {
-            return ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+            using (IDbConnection dbConnection = new SQLiteConnection(RepositoryUtil.LoadConnectionString()))
+            {
+                var output = dbConnection.Query<Character>("Select * From Characters");
+                return new ObservableCollection<Character>(output);
+            }
         }
     }
 }

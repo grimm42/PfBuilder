@@ -4,7 +4,7 @@ namespace PfBuilder.Repository
 {
     public class Repository : IRepository<EntityBase>
     {
-        public void Create(EntityBase entity)
+        public void Insert(EntityBase entity)
         {
         }
 
@@ -12,7 +12,7 @@ namespace PfBuilder.Repository
         {
         }
 
-        public EntityBase GetById(long id)
+        public EntityBase LoadEntity(long id)
         {
             return new EntityBase();
         }
