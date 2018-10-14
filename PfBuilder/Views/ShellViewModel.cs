@@ -4,40 +4,45 @@ using PfBuilder.Infrastructure.ViewModel;
 using PfBuilder.Models.Entities;
 using PfBuilder.Repository.Repositories;
 using Prism.Commands;
+using Prism.Regions;
 
 namespace PfBuilder.Views
 {
     public class ShellViewModel : ViewModelBase
     {
         private readonly IUnityContainer _unityContainer;
+        private readonly IRegionManager _regionManager;
 
-        public DelegateCommand CreateCharacterCommand { get; set; }
+        //public DelegateCommand<string> ShellLoadedCommand { get; set; }
 
-        public ShellViewModel(IUnityContainer unityContainer)
+        public ShellViewModel(IUnityContainer unityContainer, IRegionManager regionManager)
         {
             _unityContainer = unityContainer;
-            CreateCharacterCommand = new DelegateCommand(CreateCharacter);
-            Title = "Wait For it....";
+            _regionManager = regionManager;
+
+            //ShellLoadedCommand = new DelegateCommand<string>(ShellLoaded);
+            //Title = "Wait For it....";
         }
 
-        private void CreateCharacter()
-        {
-            var charRepository = new CharacterRepository();
-            //var testChar = charRepository.LoadEntity(2);
-            //charRepository.Delete(testChar);
-            //Title = testChar.Name;
-            //var testChar = new Character
-            //{
-            //    Name = "Grimm Test",
-            //    Player = "Nick",
-            //    Age = 25,
-            //    Gender = EnumUtil.GenderType.Male,
-            //    Alignment = EnumUtil.AlignmentType.ChaoticNeutral
-            //};
-            //charRepository.Insert(testChar);
-            //var testChar2 = charRepository.LoadEntity(5);
-            //Title = testChar2.Name;
-            //Title = "success";
-        }
+        //private void CreateCharacter(string path)
+        //{
+            
+        //    //var charRepository = new CharacterRepository();
+        //    //var testChar = charRepository.LoadEntity(2);
+        //    //charRepository.Delete(testChar);
+        //    //Title = testChar.Name;
+        //    //var testChar = new Character
+        //    //{
+        //    //    Name = "Grimm Test",
+        //    //    Player = "Nick",
+        //    //    Age = 25,
+        //    //    Gender = EnumUtil.GenderType.Male,
+        //    //    Alignment = EnumUtil.AlignmentType.ChaoticNeutral
+        //    //};
+        //    //charRepository.Insert(testChar);
+        //    //var testChar2 = charRepository.LoadEntity(5);
+        //    //Title = testChar2.Name;
+        //    //Title = "success";
+        //}
     }
 }

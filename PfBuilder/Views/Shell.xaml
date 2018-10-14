@@ -4,30 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
         Title="Shell" Height="450" Width="800">
+    <!--<i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <prism:InvokeCommandAction Command="{Binding ShellLoadedCommand}" CommandParameter="MainMenu"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>-->
     <Grid>
-        
-        <StackPanel>
-            <materialDesign:Card Padding="32" Margin="16"
-                             Background="{DynamicResource PrimaryHueMidBrush}">
-                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"                       
-                       Text="Shell Window"/>
-            </materialDesign:Card>
-            <Button Content="Click Me"
-                FontSize="25"
-                Width="200"
-                Height="50"
-                Foreground="Black"
-                Command="{Binding CreateCharacterCommand}"/>
-            <Button Content="{Binding Title}"
-                 
-                FontSize="25"
-                Width="200"
-                Height="50"
-                Foreground="Black"/>
-        </StackPanel>
+        <ContentControl prism:RegionManager.RegionName="ShellRegion" Margin="5"/>
     </Grid>
 </Window>
