@@ -5,7 +5,7 @@ using PfBuilder.Models.Entities;
 using PfBuilder.Repository.Repositories;
 using Prism.Commands;
 
-namespace PfBuilder.ViewModels
+namespace PfBuilder.Views
 {
     public class ShellViewModel : ViewModelBase
     {
