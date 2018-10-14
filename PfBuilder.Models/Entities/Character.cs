@@ -5,7 +5,7 @@ namespace PfBuilder.Models.Entities
 {
     public class Character : EntityBase
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         private string _name;
 

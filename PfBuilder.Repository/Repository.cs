@@ -1,4 +1,5 @@
-﻿using PfBuilder.Infrastructure.Entity;
+﻿using System.Collections.ObjectModel;
+using PfBuilder.Infrastructure.Entity;
 
 namespace PfBuilder.Repository
 {
@@ -19,6 +20,11 @@ namespace PfBuilder.Repository
 
         public void Update(EntityBase entity)
         {
+        }
+
+        public ObservableCollection<EntityBase> LoadEntityCollection()
+        {
+            return new ObservableCollection<EntityBase>();
         }
     }
 }

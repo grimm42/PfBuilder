@@ -1,5 +1,7 @@
 ﻿using Microsoft.Practices.Unity;
+using PfBuilder.Infrastructure.Enums;
 using PfBuilder.Infrastructure.ViewModel;
+using PfBuilder.Models.Entities;
 using PfBuilder.Repository.Repositories;
 using Prism.Commands;
 
@@ -7,7 +9,7 @@ namespace PfBuilder.ViewModels
 {
     public class ShellViewModel : ViewModelBase
     {
-        private IUnityContainer _unityContainer;
+        private readonly IUnityContainer _unityContainer;
 
         public DelegateCommand CreateCharacterCommand { get; set; }
 
@@ -21,8 +23,21 @@ namespace PfBuilder.ViewModels
         private void CreateCharacter()
         {
             var charRepository = new CharacterRepository();
-            var testChar = charRepository.LoadEntity(1);
-            Title = testChar.Name;
+            //var testChar = charRepository.LoadEntity(2);
+            //charRepository.Delete(testChar);
+            //Title = testChar.Name;
+            //var testChar = new Character
+            //{
+            //    Name = "Grimm Test",
+            //    Player = "Nick",
+            //    Age = 25,
+            //    Gender = EnumUtil.GenderType.Male,
+            //    Alignment = EnumUtil.AlignmentType.ChaoticNeutral
+            //};
+            //charRepository.Insert(testChar);
+            //var testChar2 = charRepository.LoadEntity(5);
+            //Title = testChar2.Name;
+            //Title = "success";
         }
     }
 }
